@@ -653,6 +653,7 @@ export default {
     },
     setSchemaToTree (schema, name) {
       let treeData = convertSchemaToTree(schema, name)
+      console.log(treeData)
       this.setTree(treeData)
       // reset backup of tree data
       this.treeDataBackups = [treeData]
@@ -743,6 +744,7 @@ export default {
           reader.onload = async (e) => {
             try {
               let schema = JSON.parse(e.target.result)
+              //console.log(schema)
               if (this.multipleUpload) {
                 let treeData = convertSchemaToTree(schema)
                 await this.repository.saveSchema(schema, treeData.name)

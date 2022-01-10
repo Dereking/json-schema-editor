@@ -187,7 +187,13 @@ export function convertSchemaToTree (schema, name) {
   tree.name = schema.title || name
   tree.tooltip = schema.description
   tree.value.description = schema.description
+  
+  tree.$schema = schema.$schema
+  tree.$id = schema.$id
   convertSubSchemaToTree(tree, schema)
+
+  console.log('convertSchemaToTree ', tree, schema)
+
   return tree
 }
 

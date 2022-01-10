@@ -1,6 +1,6 @@
 import Components from './components'
 
-export var componentData = [
+export var componentData = [ 
   new Components.StringComponent('Type string'),
   new Components.IntegerComponent('Type integer'),
   new Components.NumberComponent('Type number'),
